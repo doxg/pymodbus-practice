@@ -1,0 +1,273 @@
+!!python/object:configs.config.Arguments
+
+hosts:
+- ["192.168.0.8", 502]
+- ["192.168.0.12", 503]
+
+first_incoming:
+  0
+timestamp_addr:
+  250
+
+coil_addr:
+  1ZYR5311: 1
+  1ZYR5312: 2
+  1ZYR1331: 3
+  1ZYR2331: 4
+  1ZSR5401A: 5
+  1ZSR5401B: 6
+  1ZYR5471: 7
+  1ZYR5472: 8
+  1AUTSTSQ_ON: 9
+  T1_L33CB1O: 10
+  T1_L33CB2O: 11
+  T1_L33CB3O: 12
+  T1_L33CB4O: 13
+  T1_L4SS_RUN: 14
+  T1_L86GLT7_EVT: 28
+  T1_L28FD: 29
+  T1_L3: 17
+  1ZSO1132: 18
+  1ZSO1133: 19
+  1ZSO1135: 20
+  1ZSO1102: 21
+  1ZSO1103: 22
+  T2_L33CB1O: 23
+  T2_L33CB2O: 24
+  T2_L33CB3O: 25
+  T2_L33CB4O: 26
+  T2_L4SS_RUN: 27
+  T2_L3: 30
+  1ZSO2132: 31
+  1ZSO2133: 32
+  1ZSO2135: 33
+  1ZSO2102: 34
+  1ZSO2103: 35
+  T1_L52GX: 36
+  T2_L52GX: 37
+  1ZSO1117: 38
+  1ZSO1116: 39
+  1ZSO1026: 40
+  1ZSO1021: 41
+  1ZSO2117: 42
+  1ZSO2116: 43
+  1ZSO2026: 44
+  1ZSO2021: 45
+  016-01829-OUT: 46
+  S1_L3CUST_PERM: 47
+  S1_L33DRAIN_PER: 48
+  016-00288-OUT: 49
+  S1_L3START_MAN: 50
+  S1_L3START_AUTO: 51
+  1XS5907: 52
+  L14HM: 53
+  S1_L52GX: 54
+  T1_L83TMSEL: 55
+  T2_L83TMSEL: 56
+  1SEQ223B-DONE: 57
+  1ZSO1145: 58
+  1ZSO2145: 59
+  1ZSO1175: 60
+  1ZSO2175: 61
+  1ZSO5062: 62
+  T1_L83EX: 63
+  T2_L83EX: 64
+  1TV1118-Mode: 65
+  1TV2118-Mode: 66
+  1TV1025-Mode: 67
+  1TV2025-Mode: 68
+  S1_SAD1: 69
+  S1_SAD2: 70
+
+reg_addr:
+  T1_CTIMR1: 1
+  1TY5904: 2
+  1STDL5477: 3
+  T1_DWATT: 4
+  T2_DWATT: 5
+  S1_DWATT: 6
+  T1_FQG: 7
+  T2_FQG: 8
+  1FI5301-TT: 9
+  1FI5302-TT: 10
+  1LI1100: 11
+  1LI2100: 12
+  1LI1130: 13
+  1LI2130: 14
+  1LI1160: 15
+  1LI2160: 16
+  S1_EV_P_SCA: 17
+  1TE5417: 18
+  1PI1100: 19
+  1PI2100: 20
+  T1_TNH_rpm: 21
+  1PI1130: 22
+  1ZT1071: 23
+  1ZT1001: 24
+  T2_TNH_rpm: 25
+  1PI2130: 26
+  1ZT2071: 27
+  1ZT2001: 28
+  1FT111-RATE: 29
+  1FT211-RATE: 30
+  1AIT1831: 31
+  1AIT2831: 32
+  1PT5035: 33
+  1TE5034: 34
+  1TE5036: 35
+  S1_TNH_rpm: 36
+  S1_IP_P: 37
+  S1_TT_IS: 38
+  S1_TT_1SBU1: 39
+  S1_TT_1SBU2: 40
+  S1_INLET_DIF: 41
+  S1_ECCENT: 42
+  S1_TT_SSH: 43
+  S1_V1_POS: 44
+  S1_V1L_POS: 45
+  S1_TT_LOCO: 46
+  1PT5015: 47
+  1TI1118: 59
+  1TI2118: 60
+  1STDL5472: 50
+  1STDL5473: 51
+  1STDL5474: 52
+  1STDL5475: 53
+  1FI5321: 54
+  T1_ttxm: 55
+  T2_ttxm: 56
+  1PI1001: 57
+  1PI2001: 58
+  T1_L90PSEL_CMD: 62
+  T2_L90PSEL_CMD: 63
+  T1_FTG: 64
+  T2_FTG: 65
+  1ZT1072: 66
+  1ZT2072: 67
+  S1_ACV_POS: 68
+  S1_AP_P: 69
+  S1_TT_LPAS: 70
+  1ZT1061: 71
+  1ZT2061: 72
+  1TI1177: 73
+  1TI2177: 74
+  1PT5106: 75
+  1TE5031: 76
+  1PI1061: 77
+  T1_CTIM: 78
+  T2_CTIM: 79
+  T1_AFPEP: 80
+  T2_AFPEP: 81
+  S1_MSV_POS: 82
+  S1_MSV2_POS: 83
+  S1_LIV_POS: 84
+  S1_RIV_POS: 85
+  1ZSO1148: 86
+  1ZSO2148: 87
+  S1_SSV1A_POS: 88
+  S1_SSV2A_POS: 89
+  S1_SSV1B_POS: 90
+  S1_SSV2B_POS: 91
+  S1_SSV4A_POS: 92
+  S1_SSV4B_POS: 93
+  1FI5301: 94
+  1FI5302: 95
+  1G1STSQ-LEAD: 97
+
+units:
+  "GT":
+    "GT_Load":
+      "MW"
+    "GT_Fuel consumtion":
+      "Lb/Sec"
+    "GT_Exhaust":
+      "Lb/Sec"
+    "GT_ExhaustPressure":
+      "barg"
+    "GT_RPM":
+      "RPM"
+    "Ambient Temp":
+      "DEGF"
+    "Relative_Humidity":
+      "%"
+
+  "HRSG":
+    "HRSG Inlet Duct Temp":
+      "DEGF"
+    "HRSG Mod1 Temp":
+      "DEGC"
+    "HRSG Mod2 Temp":
+      "DEGC"
+    "HRSG Mod3 Temp":
+      "DEGC"
+    "HRSG Outlet Stack Temp":
+      "DEGC"
+
+  "SCR":
+    "Ammonia Storage Level":
+      "mm"
+    "Ammonia Line P":
+      "bar.g"
+    "Compression Air Pressure":
+      "bar.g"
+    "Exhaust Gas Temp A/B":
+      "DEGC"
+    "Exhaust Gas Temp A/B/C":
+      "DEGC"
+    "Exhaust Gas Pressure A/B/C":
+      "mbar.g"
+    "Ammonia Injection":
+      "kg/hr"
+    "Ammonia Injection Control Valve":
+      "%"
+    "Inlet NO":
+      "ppm"
+    "Inlet NO2":
+      "ppm"
+    "Inlet O2":
+      "%"
+    "Outlet NO":
+      "ppm"
+    "Outlet NO2":
+      "ppm"
+    "Stack NOx":
+      "ppm"
+    "Outlet O2":
+      "%"
+    "Ammonia Slip":
+      "ppm"
+    "Exhaust Gas Flow Rate":
+      "m/s"
+    "Inlet CO":
+      "ppm"
+    "Inlet THC":
+      "ppm"
+    "Outlet CO":
+      "ppm"
+    "Outlet THC":
+      "ppm"
+  "YPES":
+    "Reducing Agent Storage":
+      "mm"
+    "Reducing Agent Injection":
+      "kg/hr"
+    "Reducing Agent Injection CV":
+      "%"
+    "HRSG Inlet Duct NO":
+      "ppm"
+    "HRSG Inlet Duct NO2":
+      "ppm"
+    "Outlet NO":
+      "ppm"
+    "Outlet NO2":
+      "ppm"
+
+  "IODCS":
+    "Dust Filter Pressure Diff":
+      "mbar"
+    "Dust Filter Temp":
+      "DEGC"
+    "HRSG Stack Dust":
+      "ppm"
+    "Filter Motor":
+      "%"
