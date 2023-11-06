@@ -3,6 +3,10 @@ import datetime
 import logging
 from queue import Queue
 
+import asyncio
+import win32com.server.register
+from pymodbus.device import ModbusDeviceIdentification
+
 """
 ModBus is serial communication protocol. ModBusTCP is TCP/IP communication protocol (Ethernet based). 
 """
@@ -10,10 +14,24 @@ ModBus is serial communication protocol. ModBusTCP is TCP/IP communication proto
 from pyModbusTCP.utils import *
 from pymodbus.datastore import ModbusSequentialDataBlock
 from pymodbus.datastore import ModbusServerContext, ModbusSlaveContext
-from pymodbus.server import StartTcpServer
+from pymodbus.server import StartTcpServer, StartAsyncSerialServer, StartSerialServer
+import pymodbus
+
+
+from pymodbus.transaction import (
+    #    ModbusAsciiFramer,
+    #    ModbusBinaryFramer,
+    ModbusRtuFramer,
+    ModbusSocketFramer,
+    ModbusTlsFramer,
+)
 
 # Constants
 from utils import read_args, convert_unicode
+pymodbus.pymodbus_apply_logging_config()
+
+
+print("Pymodbus Version : ", pymodbus.__version__)
 
 MAX_16_BIT = 32768
 
@@ -95,9 +113,28 @@ store = ModbusSlaveContext(
 
 context = ModbusServerContext(slaves=store, single=True)
 
+identity = ModbusDeviceIdentification(
+        info_name={
+            "VendorName": "Pymodbus",
+            "ProductCode": "PM",
+            "VendorUrl": "https://github.com/pymodbus-dev/pymodbus/",
+            "ProductName": "Pymodbus Server",
+            "ModelName": "Pymodbus Server",
+            "MajorMinorRevision": "3.5.2",
+        }
+    )
+
+
 """
 In the pyModbus protocol, the client is typically considered the master, and the server is considered the slave. 
 The client (master) initiates requests to read from or write to the server (slave), and the server responds to these requests.
 """
-server1 = StartTcpServer(context=context, address=("192.168.0.8", 502))
+# server1 = StartTcpServer(context=context, address=("192.168.0.8", 502))
+
+
+async def run_server():
+    # Error: serial.serialutil.SerialException: could not open port 'COM3': FileNotFoundError.
+    server2 = await StartAsyncSerialServer(port="COM3", baudrate=9600, stop_bits=1, bytesize=8, context=context, identity=identity, framer=ModbusRtuFramer)
+
+asyncio.run(run_server())
 print('Starting server on ports 502')

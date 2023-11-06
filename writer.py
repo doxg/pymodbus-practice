@@ -78,5 +78,3 @@ if __name__ == "__main__":
         write(client, rand_num)
         time.sleep(1.0)
 
-# TODO make a plan for day:
-# important tasks: 1)
