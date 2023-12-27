@@ -4,7 +4,7 @@ import random
 import time
 import pandas as pd
 from client import FloatModbusClient
-from utils import *
+from components import *
 import os
 import datetime
 import colorama
