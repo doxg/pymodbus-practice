@@ -1,2 +1,4 @@
 temp.py
 data/
+__pycache__/
+.idea/

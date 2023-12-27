@@ -28,7 +28,7 @@ from pymodbus.transaction import (
 
 # Constants
 from utils import read_args, convert_unicode
-pymodbus.pymodbus_apply_logging_config()
+pymodbus.pymodbus_apply_logging_config(level=logging.INFO)
 
 
 print("Pymodbus Version : ", pymodbus.__version__)
@@ -45,7 +45,7 @@ parser.add_argument('-d', '--debug', action='store_true', help='set debug mode')
 args = parser.parse_args()
 
 if args.debug:
-    logging.getLogger('pyModbusTCP.server1').setLevel(logging.DEBUG)
+    logging.getLogger('pyModbusTCP.server1').setLevel(logging.INFO)
 
 
 """
