@@ -2,3 +2,7 @@ temp.py
 data/
 __pycache__/
 .idea/
+general_log/
+saved_data/
+log/
+reg_data_dirty_2024-02-07.csv

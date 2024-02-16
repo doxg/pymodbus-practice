@@ -27,7 +27,7 @@ from pymodbus.transaction import (
 )
 
 # Constants
-from utils import read_args, convert_unicode
+from components.utils import *
 pymodbus.pymodbus_apply_logging_config(level=logging.INFO)
 
 

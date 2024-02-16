@@ -4,7 +4,8 @@ import random
 import time
 import pandas as pd
 from client import FloatModbusClient
-from utils import *
+from pymodbus.client import ModbusSerialClient
+from components.utils import *
 import os
 import datetime
 import colorama
@@ -14,7 +15,7 @@ colorama.init()
 
 def open_connection(client, host, port=502):
     res = True
-    if not client.is_open:
+    if not client.connected():
         try:
             client.host = host
             client.port = port
@@ -56,7 +57,7 @@ def write(client, rand_num):
         return
     try:
         for category, address in args.reg_addr.items():
-            client.write_float(address, [rand_num])
+            client.write_registers(address, [rand_num])
             print(f'Successfully wrote {rand_num} to {address}')
         val_to_write = 0
 
@@ -72,9 +73,11 @@ def write(client, rand_num):
 
 
 if __name__ == "__main__":
-    client = FloatModbusClient(timeout=2.0)
+    # client = FloatModbusClient(timeout=2.0)
+    client = ModbusSerialClient(port='COM3',
+                                timeout=1,
+                                baudrate=19200)
     while True:
         rand_num = random.randint(1, 100)
         write(client, rand_num)
         time.sleep(1.0)
-
